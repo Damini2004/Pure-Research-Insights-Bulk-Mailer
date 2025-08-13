@@ -117,12 +117,12 @@ export async function sendEmailsAction(data: z.infer<typeof sendEmailsActionSche
 
     const lines = recipientsFileContent.trim().split('\n');
     const headerLine = lines.shift() || '';
-    const header = headerLine.toLowerCase().split(',').map(h => h.trim().replace(/"/g, ''));
+    const header = headerLine.split(',').map(h => h.trim().replace(/"/g, ''));
     
     // Normalize headers to be valid variable names
     const normalizedHeader = header.map(h => h.replace(/[^a-zA-Z0-9_]/g, ''));
     
-    const emailIndex = header.indexOf('email');
+    const emailIndex = header.map(h => h.toLowerCase()).indexOf('email');
 
     if (emailIndex === -1) {
       return { success: false, message: `The recipient file must contain an "email" column. Please check your file.` };
@@ -202,5 +202,3 @@ export async function sendEmailsAction(data: z.infer<typeof sendEmailsActionSche
     return { success: false, message: 'Failed to send emails. Please check server logs for details.' };
   }
 }
-
-    
