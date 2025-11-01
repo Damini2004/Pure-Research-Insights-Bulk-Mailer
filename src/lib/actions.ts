@@ -66,7 +66,7 @@ export async function sendEmailsAction(data: z.infer<typeof sendEmailsActionSche
     const personalizedSubject = subjectTemplate(recipientData);
     
     const mailOptions: nodemailer.SendMailOptions = {
-      from: `Pure Publication <${process.env.EMAIL_USER}>`,
+      from: `Pure Research Insights <${process.env.EMAIL_USER}>`,
       to: email,
       subject: personalizedSubject,
       html: personalizedMessage,
@@ -152,7 +152,7 @@ export async function sendEmailsAction(data: z.infer<typeof sendEmailsActionSche
       const personalizedSubject = subjectTemplate(recipientData);
       
       const mailOptions: nodemailer.SendMailOptions = {
-        from: `Pure Publication <${process.env.EMAIL_USER}>`,
+        from: `Pure Research Insights <${process.env.EMAIL_USER}>`,
         to: email,
         subject: personalizedSubject,
         html: personalizedMessage,
