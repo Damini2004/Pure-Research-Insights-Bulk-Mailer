@@ -8,8 +8,7 @@ export default function Home() {
         <div className="bg-gradient-to-br from-primary to-accent p-8 rounded-t-3xl text-center">
             <div className="inline-flex items-center justify-center bg-white/20 text-primary-foreground rounded-full w-20 h-20 mb-4">
               <Image
-                src="https://picsum.photos/seed/logo/80/80"
-                alt="Pure Research Insights Logo"
+                src="https://picsum.photos/seed/logo/80/80Pure Research Insights Logo"
                 width={80}
                 height={80}
                 className="rounded-full"
