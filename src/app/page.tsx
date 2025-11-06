@@ -1,13 +1,20 @@
 import MailForm from "@/components/MailForm";
-import { Mail } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="min-h-screen w-full flex flex-col items-center bg-background p-4 sm:p-6 md:p-8">
       <div className="w-full max-w-2xl relative">
         <div className="bg-gradient-to-br from-primary to-accent p-8 rounded-t-3xl text-center">
-            <div className="inline-flex items-center justify-center bg-white/20 text-primary-foreground rounded-full w-16 h-16 mb-4">
-                <Mail className="w-8 h-8" />
+            <div className="inline-flex items-center justify-center bg-white/20 text-primary-foreground rounded-full w-20 h-20 mb-4">
+              <Image
+                src="https://picsum.photos/seed/logo/80/80"
+                alt="Pure Research Insights Logo"
+                width={80}
+                height={80}
+                className="rounded-full"
+                data-ai-hint="logo"
+              />
             </div>
             <h1 className="font-headline text-4xl md:text-5xl font-bold text-primary-foreground">
                 Pure Research Insights
